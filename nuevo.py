@@ -6,10 +6,10 @@ df = pd.read_excel(archivo_excel,
                    sheet_name = hoja_excel,
                    usecols = "A:C", )
 st.dataframe(df)
-df_cvac = pd.read_excel(archivo_excel,
+df = pd.read_excel(archivo_excel,
                             sheet_name = hoja_excel,
                             usecols = "A:C")
-df_cvac = df_cvac.rename(columns = {"latitud":"lat",
-                                    "longitud":"lon",
-                                       })                                                                       
-st.map(df_cvac())
+df = df.rename(columns = {"latitud":"lat",
+                          "longitud":"lon",
+                          })                                                                       
+st.map(df)
