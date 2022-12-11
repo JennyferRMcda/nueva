@@ -6,7 +6,7 @@ import numpy as np
 
 #Importar el mapa de localización de los centros de vacunación
 archivo_excel = "copia.xlsx"
-hoja_excel = "coordenadas"
+hoja_excel = "copia"
 df = pd.read_excel(archivo_excel,
                    sheet_name = hoja_excel,
                    usecols = "A:C", )
