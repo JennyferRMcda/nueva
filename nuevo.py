@@ -4,13 +4,22 @@ import numpy as np
 
 
 
-df_otorgada = pd.read_csv('https://raw.githubusercontent.com/JennyferRMcda/nueva/main/copia.csv')
+#Importar el mapa de localización de los centros de vacunación
+archivo_excel = "copia.xlsx"
+hoja_excel = "coordenadas"
+df = pd.read_excel(archivo_excel,
+                   sheet_name = hoja_excel,
+                   usecols = "A:C", )
+st.dataframe(df)
+
 @st.cache
-def otorgada_data():
-    df_otorgada = pd.read_csv('copia.csv')
-    df_otorgada = df_otorgada.rename(columns={'latitud':'lat',
-                                              'longitud':'lon',
-                                              })     
-    return df_otorgada
-data = otorgada_data()
-st.map(data)
+def cvac():
+    df_cvac = pd.read_excel(archivo_excel,
+                            sheet_name = hoja_excel,
+                            usecols = "A:C")
+    df_cvac = df_cvac.rename(columns = {"latitud":"lat",
+                                        "longitud":"lon",
+                                       })                                 
+    return df_cvac
+
+st.map(cvac())
