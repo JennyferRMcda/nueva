@@ -16,7 +16,6 @@ st.dataframe(df)
 df = pd.read_excel(archivo_excel,
                             sheet_name = hoja_excel,
                             usecols = "A:C")
-#df = df.rename(columns = {"latitud":"lat",
-                          #"longitud":"lon",
-                          #})                                                                       
+df = df.rename(columns = {"latitud":"lat",
+                          "longitud":"lon", })                                                                       
 st.map(df)
