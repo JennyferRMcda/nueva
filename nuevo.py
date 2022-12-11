@@ -7,7 +7,7 @@ df = pd.read_excel(archivo_excel,
                    usecols = "A:C", )
 st.dataframe(df)
 @st.cache
-def cvac():
+def df_cvac():
     df_cvac = pd.read_excel(archivo_excel,
                             sheet_name = hoja_excel,
                             usecols = "A:C")
@@ -16,4 +16,4 @@ def cvac():
                                        })                                 
     return df_cvac
 
-st.map(cvac())
+st.map(df_cvac())
