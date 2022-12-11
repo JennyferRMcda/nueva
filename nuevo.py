@@ -14,6 +14,6 @@ df = pd.read_excel(archivo_excel,
                    usecols = "A:C", )
 st.dataframe(df)
 
-df = df.rename(columns = {"latitud":"lat",
+df = pd.df.rename(columns = {"latitud":"lat",
                           "longitud":"lon", })                                                                       
 #st.map(df)
