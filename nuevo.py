@@ -16,4 +16,4 @@ st.dataframe(df)
 
 df = df.rename(columns = {"latitud":"lat",
                           "longitud":"lon", })                                                                       
-st.map(df)
+#st.map(df)
