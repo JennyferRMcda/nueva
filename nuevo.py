@@ -18,7 +18,7 @@ df = df.rename(columns = {"latitud":"lat",
 
 st.map(df)
 
-
+df_otorgada = pd.read_csv("https://raw.githubusercontent.com/JennyferRMcda/nueva/main/coordenadas_de_centros_vac.csv")
 @st.cache
 def otorgada_data():
     df_otorgada = pd.read_csv('coordenadas_de_centros_vac.csv')
